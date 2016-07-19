@@ -39,6 +39,8 @@
 		8FE2F8C51D3EF0FA0066544C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2F8AB1D3EF0FA0066544C /* SystemConfiguration.framework */; };
 		8FE2F8C61D3EF0FA0066544C /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2F8AC1D3EF0FA0066544C /* Twitter.framework */; };
 		8FE2F8C71D3EF0FA0066544C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2F8AD1D3EF0FA0066544C /* UIKit.framework */; };
+		8FE2F8CC1D3EF2C00066544C /* TapjoyResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8FE2F8CA1D3EF2C00066544C /* TapjoyResources.bundle */; };
+		8FE2F8CD1D3EF2C00066544C /* Tapjoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2F8CB1D3EF2C00066544C /* Tapjoy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		8FE2F8AB1D3EF0FA0066544C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8FE2F8AC1D3EF0FA0066544C /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		8FE2F8AD1D3EF0FA0066544C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8FE2F8CA1D3EF2C00066544C /* TapjoyResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapjoyResources.bundle; sourceTree = "<group>"; };
+		8FE2F8CB1D3EF2C00066544C /* Tapjoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tapjoy.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				8FE2F8C21D3EF0FA0066544C /* Security.framework in Frameworks */,
 				8FE2F8C31D3EF0FA0066544C /* Social.framework in Frameworks */,
 				8FE2F8C41D3EF0FA0066544C /* StoreKit.framework in Frameworks */,
+				8FE2F8CD1D3EF2C00066544C /* Tapjoy.framework in Frameworks */,
 				8FE2F8C51D3EF0FA0066544C /* SystemConfiguration.framework in Frameworks */,
 				8FE2F8C61D3EF0FA0066544C /* Twitter.framework in Frameworks */,
 				8FE2F8C71D3EF0FA0066544C /* UIKit.framework in Frameworks */,
@@ -120,6 +125,7 @@
 		8FE2F8711D3EEFDC0066544C = {
 			isa = PBXGroup;
 			children = (
+				8FE2F8C81D3EF2C00066544C /* Tapjoy.embeddedframework */,
 				8FE2F87C1D3EEFDC0066544C /* IntegrationsApp */,
 				8FE2F8941D3EF0FA0066544C /* AdSupport.framework */,
 				8FE2F8951D3EF0FA0066544C /* CFNetwork.framework */,
@@ -183,6 +189,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8FE2F8C81D3EF2C00066544C /* Tapjoy.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2F8C91D3EF2C00066544C /* Resources */,
+				8FE2F8CB1D3EF2C00066544C /* Tapjoy.framework */,
+			);
+			path = Tapjoy.embeddedframework;
+			sourceTree = "<group>";
+		};
+		8FE2F8C91D3EF2C00066544C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2F8CA1D3EF2C00066544C /* TapjoyResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE2F8CC1D3EF2C00066544C /* TapjoyResources.bundle in Resources */,
 				8FE2F88D1D3EEFDC0066544C /* LaunchScreen.storyboard in Resources */,
 				8FE2F88A1D3EEFDC0066544C /* Assets.xcassets in Resources */,
 				8FE2F8881D3EEFDC0066544C /* Main.storyboard in Resources */,
@@ -369,6 +393,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+				);
 				INFOPLIST_FILE = IntegrationsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Test-Integration.IntegrationsApp";
@@ -380,6 +408,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+				);
 				INFOPLIST_FILE = IntegrationsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Test-Integration.IntegrationsApp";
