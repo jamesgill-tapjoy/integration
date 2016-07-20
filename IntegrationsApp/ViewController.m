@@ -64,9 +64,27 @@
 }
 
 - (IBAction)ShowOffer:(id)sender {
+    _buttonPress = @"Offer";
+    if(_offerPlacement.contentReady) {
+        [_offerPlacement showContentWithViewController: self];
+    }
+    else {
+        _offerPlacement = [TJPlacement placementWithName:@"OfferWall" delegate:self ];
+        [_offerPlacement requestContent];
+    }
+
 }
 
 - (IBAction)ShowVideo:(id)sender {
+    _buttonPress = @"Video";
+    if(_videoPlacement.contentReady) {
+        [_videoPlacement showContentWithViewController: self];
+    }
+    else {
+        _videoPlacement = [TJPlacement placementWithName:@"ShowVideo" delegate:self ];
+        [_videoPlacement requestContent];
+    }
+
 }
 
 
