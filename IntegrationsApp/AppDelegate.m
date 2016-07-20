@@ -55,6 +55,10 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    // Set the notification observer for earned-currency-notification. It's recommended that this be placed within the applicationDidBecomeActive method.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showEarnedCurrencyAlert:) name:TJC_CURRENCY_EARNED_NOTIFICATION object:nil];
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -63,10 +67,36 @@
 -(void)tjcConnectSuccess:(NSNotification*)notifyObj
 {
     NSLog(@"Tapjoy connect Succeeded");
+    // This method requests the tapjoy server for current virtual currency of the user.
+    //Get currency
+    [Tapjoy getCurrencyBalanceWithCompletion:^(NSDictionary *parameters, NSError *error) {
+        if (error) {
+            //Show error message
+            NSLog(@"getCurrencyBalance error: %@", [error localizedDescription]);
+        } else {
+            //Update currency value of your app
+            NSLog(@"getCurrencyBalance returned %@: %d", parameters[@"currencyName"], [parameters[@"amount"] intValue]);
+        }
+    }];
 }
 -(void)tjcConnectFail:(NSNotification*)notifyObj
 {
     NSLog(@"Tapjoy connect Failed");
+}
+// In the following method, you can set a custom message or use the default UIAlert to inform the user that they just earned some currency.
+- (void)showEarnedCurrencyAlert:(NSNotification*)notifyObj
+{
+    NSNumber *currencyEarned = notifyObj.object;
+    int earnedNum = [currencyEarned intValue];
+    
+    NSLog(@"Currency earned: %d", earnedNum);
+    
+    // Pops up a UIAlert notifying the user that they have successfully earned some currency.
+    // This is the default alert, so you may place a custom alert here if you choose to do so.
+    [Tapjoy showDefaultEarnedCurrencyAlert];
+    
+    // This is a good place to remove this notification since it is undesirable to have a pop-up alert more than once per app run.
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:TJC_CURRENCY_EARNED_NOTIFICATION object:nil];
 }
 
 @end
