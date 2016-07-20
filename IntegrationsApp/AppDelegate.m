@@ -18,6 +18,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //Set up success and failure notifications
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tjcConnectSuccess:)
+                                                 name:TJC_CONNECT_SUCCESS
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tjcConnectFail:)
+                                                 name:TJC_CONNECT_FAILED
+                                               object:nil];
+    
+    //Turn on Tapjoy debug mode
+    [Tapjoy setDebugEnabled:YES]; //Do not set this for any version of the game released to an app store
+    
+    //Tapjoy connect call
+    [Tapjoy connect:@"WIU0kX3YR-KwYzexxewG5wEBJT6xaPFTNNyVNOzECzKFlzHNEuzr9jgXLxRw"];
+
     return YES;
 }
 
@@ -41,6 +59,14 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+-(void)tjcConnectSuccess:(NSNotification*)notifyObj
+{
+    NSLog(@"Tapjoy connect Succeeded");
+}
+-(void)tjcConnectFail:(NSNotification*)notifyObj
+{
+    NSLog(@"Tapjoy connect Failed");
 }
 
 @end
