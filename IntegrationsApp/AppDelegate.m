@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Tapjoy/Tapjoy.h>
 
 @interface AppDelegate ()
 
