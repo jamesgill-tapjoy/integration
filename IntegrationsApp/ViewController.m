@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Tapjoy/TJPlacement.h>
+#import <Tapjoy/Tapjoy.h>
 
 
 @interface ViewController ()
@@ -39,11 +40,9 @@
 - (void)contentIsReady:(TJPlacement*)placement{
     if([_buttonPress  isEqual: @"Video"]){
         [_videoPlacement showContentWithViewController: self];
-        _buttonPress = @"empty";
     }
     if([_buttonPress  isEqual: @"Offer"]){
         [_offerPlacement showContentWithViewController: self];
-        _buttonPress = @"empty";
     }
     
 }
@@ -53,14 +52,32 @@
 
 // Called when the content is dismissed.
 - (void)contentDidDisappear:(TJPlacement*)placement{
+    NSLog(@"Content Dismissed");
+
     if([_buttonPress  isEqual: @"Video"]){
         [_videoPlacement requestContent];
+        NSLog(@"Type is Video Call");
         _buttonPress = @"empty";
     }
-    if([_buttonPress  isEqual: @"Offer"]){
+    else if([_buttonPress  isEqual: @"Offer"]){
+        NSLog(@"Type is Offer Wall Call");
         [_offerPlacement requestContent];
         _buttonPress = @"empty";
     }
+    NSLog(@"Content Dismissed Call Complete");
+    // This method requests the tapjoy server for current virtual currency of the user.
+    //Get currency
+    [Tapjoy getCurrencyBalanceWithCompletion:^(NSDictionary *parameters, NSError *error) {
+        if (error) {
+            //Show error message
+            NSLog(@"getCurrencyBalance error: %@", [error localizedDescription]);
+        } else {
+            //Update currency value of your app
+            NSLog(@"getCurrencyBalance returned %@: %d", parameters[@"currencyName"], [parameters[@"amount"] intValue]);
+        }
+    }];
+    // Set the notification observer for earned-currency-notification. It's recommended that this be placed within the applicationDidBecomeActive method.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showEarnedCurrencyAlert:) name:TJC_CURRENCY_EARNED_NOTIFICATION object:nil];
 }
 
 - (IBAction)ShowOffer:(id)sender {
@@ -83,9 +100,28 @@
     else {
         _videoPlacement = [TJPlacement placementWithName:@"ShowVideo" delegate:self ];
         [_videoPlacement requestContent];
+
     }
 
 }
+
+// In the following method, you can set a custom message or use the default UIAlert to inform the user that they just earned some currency.
+- (void)showEarnedCurrencyAlert:(NSNotification*)notifyObj
+{
+    NSNumber *currencyEarned = notifyObj.object;
+    int earnedNum = [currencyEarned intValue];
+    
+    NSLog(@"Currency earned: %d", earnedNum);
+    
+    // Pops up a UIAlert notifying the user that they have successfully earned some currency.
+    // This is the default alert, so you may place a custom alert here if you choose to do so.
+    [Tapjoy showDefaultEarnedCurrencyAlert];
+    
+    // This is a good place to remove this notification since it is undesirable to have a pop-up alert more than once per app run.
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:TJC_CURRENCY_EARNED_NOTIFICATION object:nil];
+}
+
+
 
 
 @end
