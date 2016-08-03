@@ -89,7 +89,6 @@
         _offerPlacement = [TJPlacement placementWithName:@"OfferWall" delegate:self ];
         [_offerPlacement requestContent];
     }
-
 }
 
 - (IBAction)ShowVideo:(id)sender {
@@ -104,6 +103,33 @@
     }
 
 }
+- (IBAction)award:(id)sender {
+    
+    // This method call will award 10 virtual currencies to the user's total.
+    [Tapjoy awardCurrency:10 completion:^(NSDictionary *parameters, NSError *error) {
+        if (error) {
+            NSLog(@"awardCurrency error: %@", [error localizedDescription]);
+        } else {
+            NSLog(@"awardCurrency returned %@: %d", parameters[@"currencyName"], [parameters[@"amount"] intValue]);
+        }
+    }];
+
+}
+
+- (IBAction)spend:(id)sender {
+    
+    // This method call will deduct 10 virtual currencies from the user's total.
+    [Tapjoy spendCurrency:10 completion:^(NSDictionary *parameters, NSError *error) {
+        if (error) {
+            NSLog(@"spendCurrency error: %@", [error localizedDescription]);
+        } else {
+            NSLog(@"spendCurrency returned %@: %d", parameters[@"currencyName"], [parameters[@"amount"] intValue]);
+        }
+    }];
+}
+
+
+
 
 // In the following method, you can set a custom message or use the default UIAlert to inform the user that they just earned some currency.
 - (void)showEarnedCurrencyAlert:(NSNotification*)notifyObj
@@ -120,6 +146,7 @@
     // This is a good place to remove this notification since it is undesirable to have a pop-up alert more than once per app run.
     [[NSNotificationCenter defaultCenter] removeObserver:self name:TJC_CURRENCY_EARNED_NOTIFICATION object:nil];
 }
+
 
 
 

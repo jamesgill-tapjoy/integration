@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,53 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-El-8uS">
-                                <rect key="frame" x="195" y="375" width="64" height="30"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IHq-qq-5Ex">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEu-hI-G0h">
-                                                <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="64" id="QQw-WV-VM7"/>
-                                                </constraints>
-                                                <state key="normal" title="OfferWall"/>
-                                                <connections>
-                                                    <action selector="ShowOffer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OnB-W5-Ju1"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="TEu-hI-G0h" firstAttribute="leading" secondItem="IHq-qq-5Ex" secondAttribute="leading" constant="60" id="zCB-0r-cqm"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Integration Setup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WY7-ub-633">
                                 <rect key="frame" x="189" y="151" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-gW-uSW">
                                 <rect key="frame" x="393" y="375" width="72" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="xl8-WU-Muh"/>
-                                </constraints>
                                 <state key="normal" title="Play Video"/>
                                 <connections>
                                     <action selector="ShowVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktF-Ai-QkA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkU-uq-a3b">
+                                <rect key="frame" x="98" y="375" width="104" height="30"/>
+                                <state key="normal" title="Show Offerwall"/>
+                                <connections>
+                                    <action selector="showOfferwall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAV-Rs-yKz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-62-noe">
+                                <rect key="frame" x="374" y="285" width="110" height="30"/>
+                                <state key="normal" title="Award Currency"/>
+                                <connections>
+                                    <action selector="award:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HuV-vY-93f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQ1-tO-Wwq">
+                                <rect key="frame" x="91" y="285" width="111" height="30"/>
+                                <state key="normal" title="Spend Currency"/>
+                                <connections>
+                                    <action selector="spend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kCb-Lt-4kN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kgK-El-8uS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="90" id="Yy6-Xz-iKQ"/>
-                            <constraint firstItem="WY7-ub-633" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aWr-iv-z0s"/>
-                            <constraint firstItem="WY7-ub-633" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fhk-4H-K7g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4MI-gW-uSW" secondAttribute="trailing" constant="115" id="umu-eb-R0j"/>
-                            <constraint firstItem="4MI-gW-uSW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="90" id="zam-X0-20y"/>
+                            <constraint firstItem="MQ1-tO-Wwq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="3XD-fm-SaM"/>
+                            <constraint firstItem="WY7-ub-633" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JTb-Sg-udv"/>
+                            <constraint firstItem="tkU-uq-a3b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="M6N-rX-6kv"/>
+                            <constraint firstItem="tkU-uq-a3b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="O2z-cB-YRf"/>
+                            <constraint firstItem="f4w-62-noe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="S2X-Hm-xb3"/>
+                            <constraint firstItem="4MI-gW-uSW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="U9r-j1-rJZ"/>
+                            <constraint firstItem="WY7-ub-633" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="UI9-qq-UhK"/>
+                            <constraint firstItem="tkU-uq-a3b" firstAttribute="top" secondItem="MQ1-tO-Wwq" secondAttribute="bottom" constant="60" id="VPw-iJ-H4C"/>
+                            <constraint firstAttribute="trailing" secondItem="f4w-62-noe" secondAttribute="trailing" constant="40" id="ZET-Nb-uxr"/>
+                            <constraint firstItem="MQ1-tO-Wwq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="fWC-AL-8ip"/>
+                            <constraint firstAttribute="trailing" secondItem="4MI-gW-uSW" secondAttribute="trailing" constant="40" id="sdF-Fe-0LY"/>
                         </constraints>
                     </view>
                 </viewController>
