@@ -30,13 +30,6 @@
                                     <action selector="ShowVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ktF-Ai-QkA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkU-uq-a3b">
-                                <rect key="frame" x="98" y="375" width="104" height="30"/>
-                                <state key="normal" title="Show Offerwall"/>
-                                <connections>
-                                    <action selector="showOfferwall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAV-Rs-yKz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-62-noe">
                                 <rect key="frame" x="374" y="285" width="110" height="30"/>
                                 <state key="normal" title="Award Currency"/>
@@ -51,20 +44,44 @@
                                     <action selector="spend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kCb-Lt-4kN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF9-hf-EFq">
+                                <rect key="frame" x="94" y="375" width="104" height="30"/>
+                                <state key="normal" title="Show Offerwall"/>
+                                <connections>
+                                    <action selector="ShowOffer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARt-Oi-mJD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU3-4r-sxg">
+                                <rect key="frame" x="97" y="453" width="98" height="30"/>
+                                <state key="normal" title="Purchase Item"/>
+                                <connections>
+                                    <action selector="purchaseItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcH-Vd-xaF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGm-Hi-25x">
+                                <rect key="frame" x="381" y="453" width="97" height="30"/>
+                                <state key="normal" title="RC Placement"/>
+                                <connections>
+                                    <action selector="rc_placement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wej-B7-sZo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MQ1-tO-Wwq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="3XD-fm-SaM"/>
+                            <constraint firstItem="lU3-4r-sxg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="180" id="4lL-xy-elP"/>
                             <constraint firstItem="WY7-ub-633" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JTb-Sg-udv"/>
-                            <constraint firstItem="tkU-uq-a3b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="M6N-rX-6kv"/>
-                            <constraint firstItem="tkU-uq-a3b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="O2z-cB-YRf"/>
+                            <constraint firstAttribute="trailing" secondItem="eGm-Hi-25x" secondAttribute="trailing" constant="40" id="Ozn-Hz-vba"/>
                             <constraint firstItem="f4w-62-noe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="S2X-Hm-xb3"/>
                             <constraint firstItem="4MI-gW-uSW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="U9r-j1-rJZ"/>
                             <constraint firstItem="WY7-ub-633" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="UI9-qq-UhK"/>
-                            <constraint firstItem="tkU-uq-a3b" firstAttribute="top" secondItem="MQ1-tO-Wwq" secondAttribute="bottom" constant="60" id="VPw-iJ-H4C"/>
+                            <constraint firstItem="yF9-hf-EFq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="XsZ-OS-7wP"/>
                             <constraint firstAttribute="trailing" secondItem="f4w-62-noe" secondAttribute="trailing" constant="40" id="ZET-Nb-uxr"/>
                             <constraint firstItem="MQ1-tO-Wwq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="fWC-AL-8ip"/>
+                            <constraint firstItem="yF9-hf-EFq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="gT6-YF-dzf"/>
+                            <constraint firstItem="lU3-4r-sxg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="q0T-Ik-KQG"/>
                             <constraint firstAttribute="trailing" secondItem="4MI-gW-uSW" secondAttribute="trailing" constant="40" id="sdF-Fe-0LY"/>
+                            <constraint firstItem="eGm-Hi-25x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="180" id="vDk-ZF-Bj6"/>
                         </constraints>
                     </view>
                 </viewController>

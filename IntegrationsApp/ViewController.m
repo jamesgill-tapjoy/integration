@@ -14,6 +14,7 @@
 @interface ViewController ()
 @property (strong, nonatomic) TJPlacement *offerPlacement;
 @property (strong, nonatomic) TJPlacement *videoPlacement;
+@property (strong, nonatomic) TJPlacement *rewardContent;
 @property (nonatomic,copy) NSString *buttonPress;
 @end
 
@@ -44,6 +45,9 @@
     if([_buttonPress  isEqual: @"Offer"]){
         [_offerPlacement showContentWithViewController: self];
     }
+    if([_buttonPress  isEqual: @"Reward"]){
+        [_rewardContent showContentWithViewController: self];
+    }
     
 }
 
@@ -64,6 +68,11 @@
         [_offerPlacement requestContent];
         _buttonPress = @"empty";
     }
+    else if([_buttonPress  isEqual: @"Offer"]){
+        NSLog(@"Type is Offer Wall Call");
+        [_rewardContent requestContent];
+        _buttonPress = @"empty";
+    }
     NSLog(@"Content Dismissed Call Complete");
     // This method requests the tapjoy server for current virtual currency of the user.
     //Get currency
@@ -80,16 +89,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showEarnedCurrencyAlert:) name:TJC_CURRENCY_EARNED_NOTIFICATION object:nil];
 }
 
-- (IBAction)ShowOffer:(id)sender {
-    _buttonPress = @"Offer";
-    if(_offerPlacement.contentReady) {
-        [_offerPlacement showContentWithViewController: self];
-    }
-    else {
-        _offerPlacement = [TJPlacement placementWithName:@"OfferWall" delegate:self ];
-        [_offerPlacement requestContent];
-    }
-}
 
 - (IBAction)ShowVideo:(id)sender {
     _buttonPress = @"Video";
@@ -117,6 +116,8 @@
 }
 
 - (IBAction)spend:(id)sender {
+    NSLog(@"Sender Reports: %@", sender);
+    
     
     // This method call will deduct 10 virtual currencies from the user's total.
     [Tapjoy spendCurrency:10 completion:^(NSDictionary *parameters, NSError *error) {
@@ -128,6 +129,35 @@
     }];
 }
 
+
+- (IBAction)ShowOffer:(id)sender {
+    _buttonPress = @"Offer";
+    NSLog(@"Button Pressed");
+    if(_offerPlacement.contentReady) {
+        [_offerPlacement showContentWithViewController: self];
+    }
+    else {
+        _offerPlacement = [TJPlacement placementWithName:@"OfferWall" delegate:self ];
+        [_offerPlacement requestContent];
+    }
+}
+
+- (IBAction)purchaseItem:(id)sender {
+    [Tapjoy trackPurchase:@"product1" currencyCode:@"USD" price:0.99 campaignId:nil transactionId:nil];
+
+}
+- (IBAction)rc_placement:(id)sender {
+    _buttonPress = @"Reward";
+    NSLog(@"Button Pressed");
+    if(_rewardContent.contentReady) {
+        [_offerPlacement showContentWithViewController: self];
+    }
+    else {
+        _rewardContent = [TJPlacement placementWithName:@"RC_Test" delegate:self ];
+        [_rewardContent requestContent];
+    }
+
+}
 
 
 
