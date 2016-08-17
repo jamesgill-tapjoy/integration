@@ -7,14 +7,16 @@
 //
 
 #import "ViewController.h"
-#import <Tapjoy/TJPlacement.h>
-#import <Tapjoy/Tapjoy.h>
+#import "FyberSDK.h"
+#import <Fyber_Tapjoy_11.6.0-r1/TJPlacement.h>
+#import <Fyber_Tapjoy_11.6.0-r1/Tapjoy.h>
 
 
 @interface ViewController ()
 @property (strong, nonatomic) TJPlacement *offerPlacement;
 @property (strong, nonatomic) TJPlacement *videoPlacement;
 @property (strong, nonatomic) TJPlacement *rewardContent;
+@property (strong, nonatomic)  FYBRewardedVideoController *rewardedVideoController;
 @property (nonatomic,copy) NSString *buttonPress;
 @end
 
@@ -24,6 +26,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // Get the Rewarded Video Controller
+    _rewardedVideoController = [FyberSDK rewardedVideoController];
+    _rewardedVideoController.delegate = self;
+    
+    // request the offers
+//    [_rewardedVideoController requestVideo];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Called when the SDK has made contact with Tapjoy's servers. It does not necessarily mean that any content is available.
+ //Called when the SDK has made contact with Tapjoy's servers. It does not necessarily mean that any content is available.
 - (void)requestDidSucceed:(TJPlacement*)placement{}
 
 // Called when there was a problem during connecting Tapjoy servers.
@@ -158,6 +167,10 @@
     }
 
 }
+- (IBAction)fyberVideo:(id)sender {
+        [_rewardedVideoController requestVideo];
+    
+}
 
 
 
@@ -177,8 +190,47 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:TJC_CURRENCY_EARNED_NOTIFICATION object:nil];
 }
 
+- (void)rewardedVideoControllerDidReceiveVideo:(FYBRewardedVideoController *)rewardedVideoController
+{
+    NSLog(@"Offers are available");
+    [_rewardedVideoController presentRewardedVideoFromViewController:self];
+    
+}
 
+- (void)rewardedVideoControllerDidStartVideo:(FYBRewardedVideoController *)rewardedVideoController
+{
+    // video started
+    
+//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(timerCalled) userInfo:nil repeats:NO];
 
+}
 
+- (void)rewardedVideoController:(FYBRewardedVideoController *)rewardedVideoController didDismissVideoWithReason:(FYBRewardedVideoControllerDismissReason)reason
+{
+    switch (reason) {
+            
+        case FYBRewardedVideoControllerDismissReasonError:
+            // error during playing
+            break;
+        case FYBRewardedVideoControllerDismissReasonUserEngaged:
+            // user was engaged
+            break;
+        case FYBRewardedVideoControllerDismissReasonAborted:
+            // user aborted video
+            break;
+    }
+}
+
+- (void)rewardedVideoController:(FYBRewardedVideoController *)rewardedVideoController didFailToStartVideoWithError:(NSError *)error
+{
+    // An error occurred while loading the video
+}
+
+-(void)timerCalled
+{
+    NSLog(@"Timer Called");
+//    [_rewardedVideoController requestVideo];
+
+}
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import <Tapjoy/Tapjoy.h>
+#import "FyberSDK.h"
+
+#import <Fyber_Tapjoy_11.6.0-r1/Tapjoy.h>
 
 @interface AppDelegate ()
 
@@ -35,6 +37,14 @@
     
     //Tapjoy connect call
     [Tapjoy connect:@"WIU0kX3YR-KwYzexxewG5wEBJT6xaPFTNNyVNOzECzKFlzHNEuzr9jgXLxRw"];
+    
+    FYBSDKOptions *options = [FYBSDKOptions optionsWithAppId:@"47108"
+                                               securityToken:@"f42e9472d7343c4daa35bff315efa2fb"];
+    
+    [FyberSDK startWithOptions:options];
+    [NSHTTPCookieStorage sharedHTTPCookieStorage].cookieAcceptPolicy = NSHTTPCookieAcceptPolicyAlways;
+
+
 
     return YES;
 }
@@ -69,8 +79,8 @@
     
     NSLog(@"Currency earned: %d", earnedNum);
     
-    // Pops up a UIAlert notifying the user that they have successfully earned some currency.
-    // This is the default alert, so you may place a custom alert here if you choose to do so.
+     //Pops up a UIAlert notifying the user that they have successfully earned some currency.
+     //This is the default alert, so you may place a custom alert here if you choose to do so.
     [Tapjoy showDefaultEarnedCurrencyAlert];
     
     // This is a good place to remove this notification since it is undesirable to have a pop-up alert more than once per app run.

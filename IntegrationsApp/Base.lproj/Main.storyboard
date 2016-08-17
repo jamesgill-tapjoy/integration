@@ -65,6 +65,13 @@
                                     <action selector="rc_placement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wej-B7-sZo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWa-iL-3Sn">
+                                <rect key="frame" x="235" y="515" width="140" height="30"/>
+                                <state key="normal" title="Play Mediated Video"/>
+                                <connections>
+                                    <action selector="fyberVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dK7-ht-CNu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -75,11 +82,13 @@
                             <constraint firstItem="f4w-62-noe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="S2X-Hm-xb3"/>
                             <constraint firstItem="4MI-gW-uSW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="U9r-j1-rJZ"/>
                             <constraint firstItem="WY7-ub-633" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="UI9-qq-UhK"/>
+                            <constraint firstItem="YWa-iL-3Sn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WVZ-dK-K4v"/>
                             <constraint firstItem="yF9-hf-EFq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="XsZ-OS-7wP"/>
                             <constraint firstAttribute="trailing" secondItem="f4w-62-noe" secondAttribute="trailing" constant="40" id="ZET-Nb-uxr"/>
                             <constraint firstItem="MQ1-tO-Wwq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="fWC-AL-8ip"/>
                             <constraint firstItem="yF9-hf-EFq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="gT6-YF-dzf"/>
                             <constraint firstItem="lU3-4r-sxg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="q0T-Ik-KQG"/>
+                            <constraint firstItem="YWa-iL-3Sn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="210" id="s4R-ig-xs1"/>
                             <constraint firstAttribute="trailing" secondItem="4MI-gW-uSW" secondAttribute="trailing" constant="40" id="sdF-Fe-0LY"/>
                             <constraint firstItem="eGm-Hi-25x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="180" id="vDk-ZF-Bj6"/>
                         </constraints>

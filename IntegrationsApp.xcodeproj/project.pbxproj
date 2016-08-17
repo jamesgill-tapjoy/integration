@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F2C265B1D64E900007D9786 /* Fyber_Tapjoy_11.6.0-r1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2C26581D64E900007D9786 /* Fyber_Tapjoy_11.6.0-r1.framework */; };
+		8F2C265C1D64E900007D9786 /* TapjoyResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F2C265A1D64E900007D9786 /* TapjoyResources.bundle */; };
+		8F2C26941D64E9BD007D9786 /* libFyberSDK-8.4.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2C268F1D64E9BD007D9786 /* libFyberSDK-8.4.1.a */; };
+		8F2C26951D64E9BD007D9786 /* FYBBackIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2C26911D64E9BD007D9786 /* FYBBackIcon@2x.png */; };
+		8F2C26961D64E9BD007D9786 /* FYBBackIconiPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2C26921D64E9BD007D9786 /* FYBBackIconiPad@2x.png */; };
+		8F2C26971D64E9BD007D9786 /* FYBBackIconiPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F2C26931D64E9BD007D9786 /* FYBBackIconiPhone@2x.png */; };
 		8FE2F87F1D3EEFDC0066544C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2F87E1D3EEFDC0066544C /* main.m */; };
 		8FE2F8821D3EEFDC0066544C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2F8811D3EEFDC0066544C /* AppDelegate.m */; };
 		8FE2F8851D3EEFDC0066544C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2F8841D3EEFDC0066544C /* ViewController.m */; };
@@ -39,11 +45,64 @@
 		8FE2F8C51D3EF0FA0066544C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2F8AB1D3EF0FA0066544C /* SystemConfiguration.framework */; };
 		8FE2F8C61D3EF0FA0066544C /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2F8AC1D3EF0FA0066544C /* Twitter.framework */; };
 		8FE2F8C71D3EF0FA0066544C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2F8AD1D3EF0FA0066544C /* UIKit.framework */; };
-		8FE2F8CC1D3EF2C00066544C /* TapjoyResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8FE2F8CA1D3EF2C00066544C /* TapjoyResources.bundle */; };
-		8FE2F8CD1D3EF2C00066544C /* Tapjoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE2F8CB1D3EF2C00066544C /* Tapjoy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F2C26581D64E900007D9786 /* Fyber_Tapjoy_11.6.0-r1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Fyber_Tapjoy_11.6.0-r1.framework"; sourceTree = "<group>"; };
+		8F2C265A1D64E900007D9786 /* TapjoyResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapjoyResources.bundle; sourceTree = "<group>"; };
+		8F2C265E1D64E9BD007D9786 /* FYB_SDK_versions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYB_SDK_versions.h; sourceTree = "<group>"; };
+		8F2C265F1D64E9BD007D9786 /* FYBAdapterOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBAdapterOptions.h; sourceTree = "<group>"; };
+		8F2C26601D64E9BD007D9786 /* FYBBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBannerController.h; sourceTree = "<group>"; };
+		8F2C26611D64E9BD007D9786 /* FYBBannerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBannerControllerDelegate.h; sourceTree = "<group>"; };
+		8F2C26621D64E9BD007D9786 /* FYBBannerControllerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBannerControllerState.h; sourceTree = "<group>"; };
+		8F2C26631D64E9BD007D9786 /* FYBBannerNetworkAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBannerNetworkAdapter.h; sourceTree = "<group>"; };
+		8F2C26641D64E9BD007D9786 /* FYBBannerNetworkAdapterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBannerNetworkAdapterDelegate.h; sourceTree = "<group>"; };
+		8F2C26651D64E9BD007D9786 /* FYBBannerPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBannerPosition.h; sourceTree = "<group>"; };
+		8F2C26661D64E9BD007D9786 /* FYBBannerSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBannerSize.h; sourceTree = "<group>"; };
+		8F2C26671D64E9BD007D9786 /* FYBBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBannerView.h; sourceTree = "<group>"; };
+		8F2C26681D64E9BD007D9786 /* FYBBaseNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBBaseNetwork.h; sourceTree = "<group>"; };
+		8F2C26691D64E9BD007D9786 /* FYBCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBCacheManager.h; sourceTree = "<group>"; };
+		8F2C266A1D64E9BD007D9786 /* FYBCreativeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBCreativeType.h; sourceTree = "<group>"; };
+		8F2C266B1D64E9BD007D9786 /* FYBError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBError.h; sourceTree = "<group>"; };
+		8F2C266C1D64E9BD007D9786 /* FyberSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FyberSDK.h; sourceTree = "<group>"; };
+		8F2C266D1D64E9BD007D9786 /* FYBInterstitialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialController.h; sourceTree = "<group>"; };
+		8F2C266E1D64E9BD007D9786 /* FYBInterstitialControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialControllerDelegate.h; sourceTree = "<group>"; };
+		8F2C266F1D64E9BD007D9786 /* FYBInterstitialControllerDismissReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialControllerDismissReason.h; sourceTree = "<group>"; };
+		8F2C26701D64E9BD007D9786 /* FYBInterstitialControllerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialControllerState.h; sourceTree = "<group>"; };
+		8F2C26711D64E9BD007D9786 /* FYBInterstitialNetworkAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialNetworkAdapter.h; sourceTree = "<group>"; };
+		8F2C26721D64E9BD007D9786 /* FYBInterstitialNetworkAdapterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialNetworkAdapterDelegate.h; sourceTree = "<group>"; };
+		8F2C26731D64E9BD007D9786 /* FYBInterstitialOffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBInterstitialOffer.h; sourceTree = "<group>"; };
+		8F2C26741D64E9BD007D9786 /* FYBLogAppender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBLogAppender.h; sourceTree = "<group>"; };
+		8F2C26751D64E9BD007D9786 /* FYBLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBLogger.h; sourceTree = "<group>"; };
+		8F2C26761D64E9BD007D9786 /* FYBLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBLogLevel.h; sourceTree = "<group>"; };
+		8F2C26771D64E9BD007D9786 /* FYBOfferWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBOfferWallViewController.h; sourceTree = "<group>"; };
+		8F2C26781D64E9BD007D9786 /* FYBPrecachingNetworkAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBPrecachingNetworkAdapter.h; sourceTree = "<group>"; };
+		8F2C26791D64E9BD007D9786 /* FYBRandomID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRandomID.h; sourceTree = "<group>"; };
+		8F2C267A1D64E9BD007D9786 /* FYBReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBReachability.h; sourceTree = "<group>"; };
+		8F2C267B1D64E9BD007D9786 /* FYBRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRequestParameters.h; sourceTree = "<group>"; };
+		8F2C267C1D64E9BD007D9786 /* FYBRewardedVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoController.h; sourceTree = "<group>"; };
+		8F2C267D1D64E9BD007D9786 /* FYBRewardedVideoControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoControllerDelegate.h; sourceTree = "<group>"; };
+		8F2C267E1D64E9BD007D9786 /* FYBRewardedVideoControllerDismissReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoControllerDismissReason.h; sourceTree = "<group>"; };
+		8F2C267F1D64E9BD007D9786 /* FYBRewardedVideoControllerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoControllerState.h; sourceTree = "<group>"; };
+		8F2C26801D64E9BD007D9786 /* FYBRewardedVideoNetworkAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoNetworkAdapter.h; sourceTree = "<group>"; };
+		8F2C26811D64E9BD007D9786 /* FYBRewardedVideoNetworkAdapterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoNetworkAdapterDelegate.h; sourceTree = "<group>"; };
+		8F2C26821D64E9BD007D9786 /* FYBRewardedVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBRewardedVideoViewController.h; sourceTree = "<group>"; };
+		8F2C26831D64E9BD007D9786 /* FYBSDKOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBSDKOptions.h; sourceTree = "<group>"; };
+		8F2C26841D64E9BD007D9786 /* FYBSystemLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBSystemLogger.h; sourceTree = "<group>"; };
+		8F2C26851D64E9BD007D9786 /* FYBTPNGenericAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBTPNGenericAdapter.h; sourceTree = "<group>"; };
+		8F2C26861D64E9BD007D9786 /* FYBTPNMediationTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBTPNMediationTypes.h; sourceTree = "<group>"; };
+		8F2C26871D64E9BD007D9786 /* FYBTPNVideoAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBTPNVideoAdapter.h; sourceTree = "<group>"; };
+		8F2C26881D64E9BD007D9786 /* FYBUrlParametersProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBUrlParametersProvider.h; sourceTree = "<group>"; };
+		8F2C26891D64E9BD007D9786 /* FYBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBUser.h; sourceTree = "<group>"; };
+		8F2C268A1D64E9BD007D9786 /* FYBUserConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBUserConstants.h; sourceTree = "<group>"; };
+		8F2C268B1D64E9BD007D9786 /* FYBVirtualCurrencyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBVirtualCurrencyClient.h; sourceTree = "<group>"; };
+		8F2C268C1D64E9BD007D9786 /* FYBVirtualCurrencyClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBVirtualCurrencyClientDelegate.h; sourceTree = "<group>"; };
+		8F2C268D1D64E9BD007D9786 /* FYBVirtualCurrencyErrorType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBVirtualCurrencyErrorType.h; sourceTree = "<group>"; };
+		8F2C268E1D64E9BD007D9786 /* FYBVirtualCurrencyResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYBVirtualCurrencyResponse.h; sourceTree = "<group>"; };
+		8F2C268F1D64E9BD007D9786 /* libFyberSDK-8.4.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libFyberSDK-8.4.1.a"; sourceTree = "<group>"; };
+		8F2C26911D64E9BD007D9786 /* FYBBackIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FYBBackIcon@2x.png"; sourceTree = "<group>"; };
+		8F2C26921D64E9BD007D9786 /* FYBBackIconiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FYBBackIconiPad@2x.png"; sourceTree = "<group>"; };
+		8F2C26931D64E9BD007D9786 /* FYBBackIconiPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FYBBackIconiPhone@2x.png"; sourceTree = "<group>"; };
 		8FE2F87A1D3EEFDC0066544C /* IntegrationsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE2F87E1D3EEFDC0066544C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FE2F8801D3EEFDC0066544C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,8 +139,6 @@
 		8FE2F8AB1D3EF0FA0066544C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8FE2F8AC1D3EF0FA0066544C /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		8FE2F8AD1D3EF0FA0066544C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8FE2F8CA1D3EF2C00066544C /* TapjoyResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapjoyResources.bundle; sourceTree = "<group>"; };
-		8FE2F8CB1D3EF2C00066544C /* Tapjoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tapjoy.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +166,11 @@
 				8FE2F8BF1D3EF0FA0066544C /* MobileCoreServices.framework in Frameworks */,
 				8FE2F8C01D3EF0FA0066544C /* PassKit.framework in Frameworks */,
 				8FE2F8C11D3EF0FA0066544C /* QuartzCore.framework in Frameworks */,
+				8F2C265B1D64E900007D9786 /* Fyber_Tapjoy_11.6.0-r1.framework in Frameworks */,
+				8F2C26941D64E9BD007D9786 /* libFyberSDK-8.4.1.a in Frameworks */,
 				8FE2F8C21D3EF0FA0066544C /* Security.framework in Frameworks */,
 				8FE2F8C31D3EF0FA0066544C /* Social.framework in Frameworks */,
 				8FE2F8C41D3EF0FA0066544C /* StoreKit.framework in Frameworks */,
-				8FE2F8CD1D3EF2C00066544C /* Tapjoy.framework in Frameworks */,
 				8FE2F8C51D3EF0FA0066544C /* SystemConfiguration.framework in Frameworks */,
 				8FE2F8C61D3EF0FA0066544C /* Twitter.framework in Frameworks */,
 				8FE2F8C71D3EF0FA0066544C /* UIKit.framework in Frameworks */,
@@ -122,10 +180,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F2C26571D64E900007D9786 /* Fyber_Tapjoy_11.6.0-r1.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				8F2C26581D64E900007D9786 /* Fyber_Tapjoy_11.6.0-r1.framework */,
+				8F2C26591D64E900007D9786 /* Resources */,
+			);
+			path = "Fyber_Tapjoy_11.6.0-r1.embeddedframework";
+			sourceTree = "<group>";
+		};
+		8F2C26591D64E900007D9786 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F2C265A1D64E900007D9786 /* TapjoyResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8F2C265D1D64E9BD007D9786 /* fyber-sdk-lib */ = {
+			isa = PBXGroup;
+			children = (
+				8F2C265E1D64E9BD007D9786 /* FYB_SDK_versions.h */,
+				8F2C265F1D64E9BD007D9786 /* FYBAdapterOptions.h */,
+				8F2C26601D64E9BD007D9786 /* FYBBannerController.h */,
+				8F2C26611D64E9BD007D9786 /* FYBBannerControllerDelegate.h */,
+				8F2C26621D64E9BD007D9786 /* FYBBannerControllerState.h */,
+				8F2C26631D64E9BD007D9786 /* FYBBannerNetworkAdapter.h */,
+				8F2C26641D64E9BD007D9786 /* FYBBannerNetworkAdapterDelegate.h */,
+				8F2C26651D64E9BD007D9786 /* FYBBannerPosition.h */,
+				8F2C26661D64E9BD007D9786 /* FYBBannerSize.h */,
+				8F2C26671D64E9BD007D9786 /* FYBBannerView.h */,
+				8F2C26681D64E9BD007D9786 /* FYBBaseNetwork.h */,
+				8F2C26691D64E9BD007D9786 /* FYBCacheManager.h */,
+				8F2C266A1D64E9BD007D9786 /* FYBCreativeType.h */,
+				8F2C266B1D64E9BD007D9786 /* FYBError.h */,
+				8F2C266C1D64E9BD007D9786 /* FyberSDK.h */,
+				8F2C266D1D64E9BD007D9786 /* FYBInterstitialController.h */,
+				8F2C266E1D64E9BD007D9786 /* FYBInterstitialControllerDelegate.h */,
+				8F2C266F1D64E9BD007D9786 /* FYBInterstitialControllerDismissReason.h */,
+				8F2C26701D64E9BD007D9786 /* FYBInterstitialControllerState.h */,
+				8F2C26711D64E9BD007D9786 /* FYBInterstitialNetworkAdapter.h */,
+				8F2C26721D64E9BD007D9786 /* FYBInterstitialNetworkAdapterDelegate.h */,
+				8F2C26731D64E9BD007D9786 /* FYBInterstitialOffer.h */,
+				8F2C26741D64E9BD007D9786 /* FYBLogAppender.h */,
+				8F2C26751D64E9BD007D9786 /* FYBLogger.h */,
+				8F2C26761D64E9BD007D9786 /* FYBLogLevel.h */,
+				8F2C26771D64E9BD007D9786 /* FYBOfferWallViewController.h */,
+				8F2C26781D64E9BD007D9786 /* FYBPrecachingNetworkAdapter.h */,
+				8F2C26791D64E9BD007D9786 /* FYBRandomID.h */,
+				8F2C267A1D64E9BD007D9786 /* FYBReachability.h */,
+				8F2C267B1D64E9BD007D9786 /* FYBRequestParameters.h */,
+				8F2C267C1D64E9BD007D9786 /* FYBRewardedVideoController.h */,
+				8F2C267D1D64E9BD007D9786 /* FYBRewardedVideoControllerDelegate.h */,
+				8F2C267E1D64E9BD007D9786 /* FYBRewardedVideoControllerDismissReason.h */,
+				8F2C267F1D64E9BD007D9786 /* FYBRewardedVideoControllerState.h */,
+				8F2C26801D64E9BD007D9786 /* FYBRewardedVideoNetworkAdapter.h */,
+				8F2C26811D64E9BD007D9786 /* FYBRewardedVideoNetworkAdapterDelegate.h */,
+				8F2C26821D64E9BD007D9786 /* FYBRewardedVideoViewController.h */,
+				8F2C26831D64E9BD007D9786 /* FYBSDKOptions.h */,
+				8F2C26841D64E9BD007D9786 /* FYBSystemLogger.h */,
+				8F2C26851D64E9BD007D9786 /* FYBTPNGenericAdapter.h */,
+				8F2C26861D64E9BD007D9786 /* FYBTPNMediationTypes.h */,
+				8F2C26871D64E9BD007D9786 /* FYBTPNVideoAdapter.h */,
+				8F2C26881D64E9BD007D9786 /* FYBUrlParametersProvider.h */,
+				8F2C26891D64E9BD007D9786 /* FYBUser.h */,
+				8F2C268A1D64E9BD007D9786 /* FYBUserConstants.h */,
+				8F2C268B1D64E9BD007D9786 /* FYBVirtualCurrencyClient.h */,
+				8F2C268C1D64E9BD007D9786 /* FYBVirtualCurrencyClientDelegate.h */,
+				8F2C268D1D64E9BD007D9786 /* FYBVirtualCurrencyErrorType.h */,
+				8F2C268E1D64E9BD007D9786 /* FYBVirtualCurrencyResponse.h */,
+				8F2C268F1D64E9BD007D9786 /* libFyberSDK-8.4.1.a */,
+				8F2C26901D64E9BD007D9786 /* Resources */,
+			);
+			path = "fyber-sdk-lib";
+			sourceTree = "<group>";
+		};
+		8F2C26901D64E9BD007D9786 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F2C26911D64E9BD007D9786 /* FYBBackIcon@2x.png */,
+				8F2C26921D64E9BD007D9786 /* FYBBackIconiPad@2x.png */,
+				8F2C26931D64E9BD007D9786 /* FYBBackIconiPhone@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8FE2F8711D3EEFDC0066544C = {
 			isa = PBXGroup;
 			children = (
-				8FE2F8C81D3EF2C00066544C /* Tapjoy.embeddedframework */,
+				8F2C265D1D64E9BD007D9786 /* fyber-sdk-lib */,
+				8F2C26571D64E900007D9786 /* Fyber_Tapjoy_11.6.0-r1.embeddedframework */,
 				8FE2F87C1D3EEFDC0066544C /* IntegrationsApp */,
 				8FE2F8941D3EF0FA0066544C /* AdSupport.framework */,
 				8FE2F8951D3EF0FA0066544C /* CFNetwork.framework */,
@@ -189,23 +333,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8FE2F8C81D3EF2C00066544C /* Tapjoy.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				8FE2F8C91D3EF2C00066544C /* Resources */,
-				8FE2F8CB1D3EF2C00066544C /* Tapjoy.framework */,
-			);
-			path = Tapjoy.embeddedframework;
-			sourceTree = "<group>";
-		};
-		8FE2F8C91D3EF2C00066544C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8FE2F8CA1D3EF2C00066544C /* TapjoyResources.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,10 +390,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FE2F8CC1D3EF2C00066544C /* TapjoyResources.bundle in Resources */,
+				8F2C265C1D64E900007D9786 /* TapjoyResources.bundle in Resources */,
 				8FE2F88D1D3EEFDC0066544C /* LaunchScreen.storyboard in Resources */,
+				8F2C26961D64E9BD007D9786 /* FYBBackIconiPad@2x.png in Resources */,
 				8FE2F88A1D3EEFDC0066544C /* Assets.xcassets in Resources */,
 				8FE2F8881D3EEFDC0066544C /* Main.storyboard in Resources */,
+				8F2C26951D64E9BD007D9786 /* FYBBackIcon@2x.png in Resources */,
+				8F2C26971D64E9BD007D9786 /* FYBBackIconiPhone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,9 +526,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+					"$(PROJECT_DIR)/Fyber_Tapjoy_11.6.0-r1.embeddedframework",
 				);
 				INFOPLIST_FILE = IntegrationsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/fyber-sdk-lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Test-Integration.IntegrationsApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -411,9 +547,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tapjoy.embeddedframework",
+					"$(PROJECT_DIR)/Fyber_Tapjoy_11.6.0-r1.embeddedframework",
 				);
 				INFOPLIST_FILE = IntegrationsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/fyber-sdk-lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Test-Integration.IntegrationsApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -438,6 +580,7 @@
 				8FE2F8931D3EEFDC0066544C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
